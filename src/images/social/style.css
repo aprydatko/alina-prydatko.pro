@@ -1,0 +1,23 @@
+.social {
+    display: flex;
+}
+
+.social__block {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.social__link:last-child {
+    margin-right: 0;
+}
+
+
+.social__img {
+    width: 16px;
+    height: 16px;
+    fill: #636363;
+}
+
+.social__img:hover {
+    color: #8799a3;
+}
