@@ -1,0 +1,14 @@
+.copyright {
+    height: 75px;
+    text-align: center;
+    background-color: #151515;
+}
+
+.copyright__text {
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: normal;
+    line-height: 75px;
+    color: #7f7f7f;
+    margin: 0;
+}

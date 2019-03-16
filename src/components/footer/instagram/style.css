@@ -1,0 +1,52 @@
+.instagram {
+    margin-top: 80px;
+    background-color: black;
+}
+
+.instagram__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.instagram__item {
+    width: 25%;
+    height: 320px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.instagram__item:nth-child(2n) {
+    background-color: #2b2b2b;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .instagram__item {
+        width: 25%;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .instagram {
+        margin-top: 60px;
+    }
+
+    .instagram__item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .instagram {
+        margin-top: 40px;
+    }
+    
+    .instagram__item {
+        height: 160px;
+    }
+}
