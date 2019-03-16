@@ -1,0 +1,34 @@
+.phone {
+    display: flex;
+    margin-right: 30px;
+    position: relative;
+    top: -5px;
+}
+
+.phone__icon {
+    margin-right: 1rem;
+}
+
+.phone__icon path {
+    fill: #ffc800;
+}
+
+.phone__title {
+    font-size: .8rem;
+    color: #cbcbcb;
+}
+
+.phone__number {
+    padding-top: 3px;
+    font-size: 1.125rem;
+    font-family: "Roboto";
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
+    .phone {
+        display: none;
+    }
+}
