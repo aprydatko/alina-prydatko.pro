@@ -1,0 +1,46 @@
+.btn {
+    display: block;
+    width: 220px;
+    height: 65px;
+    padding: 25px 60px;
+    
+    font-size: .71rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 65px;
+    background-color: transparent;
+    color: white;
+    transition: .35s ease-in-out;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -ms-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+}
+
+.btn-white {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-white:hover {
+    background-color: rgba(206, 224, 2, .1);
+    border: 2px solid #cee002;
+    color: white;
+}
+
+.btn-black {
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-black:hover {
+    background-color: transparent;
+    border: 2px solid #cee002;
+    color: black;
+}
