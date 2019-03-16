@@ -1,0 +1,44 @@
+.social {
+    display: flex;
+}
+
+.social__link {
+    margin-right: 15px;
+}
+
+.social__link:last-child {
+    margin-right: 0;
+}
+
+.social__img {
+    width: 16px;
+    height: 16px;
+}
+
+.social__img path {
+    fill: #636363;
+}
+
+.social__img:hover {
+    color: #8799a3;
+}
+
+/* Media Query */
+@media screen and (max-width: 992px) {
+
+    .social__block {
+        margin-top: 50px;
+    }
+
+    .social__link {
+        margin-right: 25px;
+    }
+
+    .open .social__img path {
+        fill: rgba(255, 255, 255, .75);
+    }
+
+    .open .social__img:hover path {
+        fill: #8799a3;
+    }
+}
