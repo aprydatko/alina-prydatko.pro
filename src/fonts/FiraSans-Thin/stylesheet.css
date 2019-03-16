@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('FiraSans-Thin.eot');
+    src: url('FiraSans-Thin.eot?#iefix') format('embedded-opentype'),
+        url('FiraSans-Thin.woff2') format('woff2'),
+        url('FiraSans-Thin.woff') format('woff'),
+        url('FiraSans-Thin.ttf') format('truetype'),
+        url('FiraSans-Thin.svg#FiraSans-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
