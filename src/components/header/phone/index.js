@@ -7,16 +7,16 @@ import './style.css'
 const PhoneComponent = () => (
     <StaticQuery 
         query={graphql`
-        {
-            allContentfulContact {
-              edges {
-                node {
-                  name
-                  content
+            {
+                allContentfulContact {
+                edges {
+                    node {
+                    name
+                    content
+                    }
                 }
-              }
+                }
             }
-          }
         `}
         render={({
             allContentfulContact: {
