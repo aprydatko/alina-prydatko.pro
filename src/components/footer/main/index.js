@@ -1,46 +1,33 @@
 import React from 'react'
+import { StaticQuery, graphql } from "gatsby"
 import './style.css'
-import Logo from '../../logo'
+import Logo from '../../logo/logo'
 import background from '../../../images/sity.jpg'
 
 const Header = ({ title }) => (
-    <div className="main-footer__title">
+    <div  className="main-footer__title">
         <h6 className="main-footer__h6">{title}</h6>
     </div>
 )
 
-const Phone = ({ phone }) => (
-    <a className="main-footer__link" 
-        href={`tel:${phone}`}>
-        {phone}
-    </a>
-)
-
-const Email = ({ email }) => (
-    <a className="main-footer__link" 
-        href={`malito:${email}`}>
-        {email}
-    </a>
-)
-
-const Address = ({ address }) => (
-    <div className="main-footer__block">
-        <div className="main-footer__link">
-            {address}
-        </div>
-    </div>
-)
-
-const Item = ({ name, children  }) => (
+const Item = ({ name, content, url }) => (
     <div className="main-footer__block">
         <strong className="main-footer__name">{name}:</strong>
-        {children}
+        {name !== "Адрес" ? 
+            <a className="main-footer__link" 
+                href={`${url}`}>
+                {content}
+            </a> :
+            <div className="main-footer__link" >
+                {content}
+            </div>
+        }
     </div>
 )
 
-const Container = ({ children }) => (
+const LogoBlock = () => (
     <div className="main-footer__item main-footer__logo">
-        {children}
+        <Logo />
     </div>
 )
 
@@ -55,24 +42,47 @@ const Wrapper = ({ children }) => (
     </div>
 )
 
-const MainFooter = ({ phone, email, address }) => (
+const Contacts = () => (
+    <StaticQuery 
+        query={graphql`
+        {
+            allContentfulContact {
+              edges {
+                node {
+                  name
+                  content
+                }
+              }
+            }
+          }
+        `}
+        render={({
+            allContentfulContact: {
+                edges
+            }
+        }) => (
+            edges.map(({ node }, index) => (
+               <div key={index} className="main-footer__item main-footer__logo">
+                   <Header title={node.name} />
+                    <Item 
+                        name={  index === 0 ? "Моб" : 
+                                index === 1 ? "Email" :
+                                "Адрес" }
+                        url={   index === 0 ? `tel:${node.content}` :
+                                index === 1 ? `malito:${node.content}` :
+                                `${node.content}`} 
+                        content={node.content} />
+               </div>
+            ))
+        )}
+    />
+)
+
+const Footer = () => (
     <Wrapper>
-        <Container>
-            <Logo />
-        </Container>
-        <Container>
-            <Header title="Позвонить" />
-            <Item name="Моб"><Phone phone={phone} /></Item>
-        </Container>
-        <Container>
-            <Header title="Написать" />
-            <Item name="Email"><Email email={email} /></Item>
-        </Container>
-        <Container>
-            <Header title="Адресc" />
-            <Address address={address} />
-        </Container>
+        <LogoBlock />
+        <Contacts />
     </Wrapper>
 )
 
-export default MainFooter
+export default Footer
