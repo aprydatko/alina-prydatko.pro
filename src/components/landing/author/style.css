@@ -1,4 +1,4 @@
-.author {
+.author__wrapper {
     display: flex;
     justify-content: center;
 }
@@ -85,7 +85,7 @@
 }
 
 @media screen and (max-width: 992px) {
-   .author {
+   .author__wrapper {
        flex-direction: column;
    }
    .about-me {

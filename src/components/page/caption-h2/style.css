@@ -1,0 +1,48 @@
+.page-caption {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.page-caption__category {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a8ca1e;
+}
+
+.page-caption__title {
+    margin-top: 10px;
+    font-size: 4.2rem;
+    font-weight: 900;
+}
+
+.page-caption__content {
+    max-width: 650px;
+    margin: 0 auto;
+    margin-top: 26px;
+    color: #7b7b7b;
+    line-height: 1.55;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    .page-caption {
+        margin-top: 60px;
+    }
+    .page-caption__title {
+        font-size: 2rem;
+    }
+    .page-caption__content {
+        font-size: .8rem;
+    }
+    .page-caption__content {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .page-caption {
+        margin-top: 40px;
+    }
+}

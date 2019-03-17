@@ -4,11 +4,32 @@ import { graphql } from "gatsby"
 import Layout from "../components/layouts/page"
 import SEO from "../components/seo"
 
+import image from "../images/works/works.jpg"
+import CaptionH2 from "../components/page/caption-h2"
+import WorkItem from "../components/work/index"
+
+const content = [
+  {
+      title: "Работы",
+      description: "Описание страницы работы",
+      backgroundImage: {image},
+      buttonURL: "/"
+  }
+]
+
 const Work = ({ data }) => (
     <>
-      <Layout>
-        <SEO title="Works Page" />
-        {console.log(data)}
+      <Layout content={content}>
+      <SEO 
+          title="Работы"
+          description="Описание страницы работы"
+          author="Придатко Алина"
+          keywords={[`работы`, `картины`, `купить`]} />
+          <CaptionH2 
+            category="works"
+            title="Мои работы"
+            description="Краткое описание "/>
+          <WorkItem data={data.allContentfulWorks.edges}/>
       </Layout>
     </>
 )

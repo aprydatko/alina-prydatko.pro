@@ -9,18 +9,23 @@
     margin-right: 1rem;
 }
 
+.phone:hover .phone__icon {
+    animation: swing 1.5s;
+    -webkit-animation: swing 1.5s;
+}
+
 .phone__icon path {
     fill: #ffc800;
 }
 
 .phone__title {
-    font-size: .8rem;
+    font-size: .7rem;
     color: #cbcbcb;
 }
 
 .phone__number {
     padding-top: 3px;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     font-family: "Roboto";
     font-weight: bold;
     letter-spacing: 0.01em;

@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./style.css"
 
@@ -17,10 +17,12 @@ const Logo = () => (
       }
     `}
     render={data => 
-        <Img 
-            className="logo" 
-            fluid={data.placeholderImage.childImageSharp.fluid} 
-        />}
+        <Link to="/">
+          <Img 
+              className="logo" 
+              fluid={data.placeholderImage.childImageSharp.fluid} />
+        </Link>
+        }
   />
 )
 export default Logo

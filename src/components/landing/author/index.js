@@ -30,14 +30,6 @@ const AuthorComponent = () => (
                   text {
                     text
                   }
-                  avatar {
-                    title
-                    description
-                    file {
-                      url
-                      fileName
-                    }
-                  }
                   photo {
                     title
                     description
@@ -78,12 +70,14 @@ const Author = ({
         }
     }
  }) => (
-    <Section className="author container" key={index}>
-        <AboutMe 
-            title={name}
-            content={text}
-            img={url} alt={title}/>
-        <Advantages />
+    <Section className="author" key={index}>
+        <div className="author__wrapper">
+          <AboutMe 
+              title={name}
+              content={text}
+              img={url} alt={title}/>
+          <Advantages />
+        </div>
     </Section>
 )
 

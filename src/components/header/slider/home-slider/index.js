@@ -61,9 +61,8 @@ const Slide = ({
     }
  }) => (
     <div key={id} className="slider">
-        <div className="slider__item">
+        <div className="slider__item" style={{ backgroundImage: `url(${url})` }}>
             <div  className="slider__content">
-                <img className="slider__picture" src={url} alt={title}></img>
                 <div className="container" style={{ position: "relative" }}>
                     <h1 
                         style={{ color: "white" }}>

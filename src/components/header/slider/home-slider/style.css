@@ -1,10 +1,60 @@
 .slider {
-    background: black;
+    
 }
 .slider__item {
     position: relative;
     height: 750px;
     overflow: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.slider__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: .15;
+    background: rgba(255,56,235,1);
+    background: -moz-linear-gradient(left, rgba(255,56,235,1) 0%, rgba(207,36,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,56,235,1)), color-stop(100%, rgba(207,36,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,56,235,1) 0%, rgba(207,36,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,56,235,1) 0%, rgba(207,36,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,56,235,1) 0%, rgba(207,36,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,56,235,1) 0%, rgba(207,36,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff38eb', endColorstr='#cf24ff', GradientType=1 );
+}
+
+.slider__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: -1;
+    transition: 2s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -ms-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+}
+
+.slider__item:hover::before {
+    opacity: .35;
+    transition: 2s ease-in-out;
+    -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -ms-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
 }
 
 .slider__item p {
@@ -12,7 +62,7 @@
     font-family: "Open Sans";
     margin: 1.8rem auto;
     font-weight: 300;
-    color: #898989;
+    color: #f2f2f2;
 }
 
 .slider__content {
@@ -26,18 +76,6 @@
 .slider__btn {
     margin: 0 auto;
     margin-top: 50px;
-}
-
-.slider__picture {
-    position: absolute;
-    top: 0;
-    left:0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    height: 100%;
-    z-index: 0;
-    opacity: .15
 }
 
 /* Media Query */

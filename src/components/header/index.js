@@ -1,11 +1,8 @@
 import React from "react"
-import Menu from "./top-menu/index"
-import Slider from "./slider/home-slider/index"
 
-const Header = () => (
+const Header = ({ children}) => (
     <header>
-        <Menu />
-        <Slider />
+        {children}
     </header>
 )
 

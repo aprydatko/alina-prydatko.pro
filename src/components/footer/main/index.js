@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import './style.css'
 import Logo from '../../logo/logo'
-import background from '../../../images/sity.jpg'
+import background from '../../../images/footer-background.jpg'
 
 const Header = ({ title }) => (
     <div  className="main-footer__title">

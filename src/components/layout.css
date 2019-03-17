@@ -114,6 +114,11 @@
     margin: 2rem 0;
   }
 
+  .btn__404page {
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
   /* Media Query */
   @media screen and (max-width: 1024px) {
     body {
@@ -151,5 +156,8 @@
     p {
       font-size: .8rem;
       margin: 1rem 0;
+    }
+    .btn__404page {
+      margin-top: 40px;
     }
   }

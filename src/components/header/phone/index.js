@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import { ReactComponent as Icon } from "../../../images/icons/phone.svg"
 import './style.css'
+import "../../animation.css"
 
 const PhoneComponent = () => (
     <StaticQuery 

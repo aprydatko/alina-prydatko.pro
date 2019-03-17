@@ -2,8 +2,8 @@ import React from 'react'
 import './style.css'
 
 const Section = ({ children, className }) => (
-    <section className="white-section">
-        <div className={className}>
+    <section className={`white-section ${className}`}>
+        <div className="container">
             {children}
         </div>
     </section>

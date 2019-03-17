@@ -1,0 +1,35 @@
+.caption-h3 {
+    margin: 0 auto;
+    margin-top: 135px;
+    max-width: 680px;
+    text-align: center;
+}
+
+.caption-h3__title {
+    line-height: 2;
+}
+
+.caption-h3__content {
+    color: #7b7b7b;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .caption-h3 {
+        margin-top: 60px;
+    }
+    .caption-h3__content {
+        font-size: .9rem;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .caption-h3 {
+        margin-top: 40px;
+    }
+    .caption-h3__content {
+        font-size: .8rem;
+    }
+}

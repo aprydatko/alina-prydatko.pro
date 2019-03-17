@@ -1,44 +1,81 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
+
 import Caption from '../caption/index'
-import WhiteSection from '../../layouts/white-section/index'
+import Section from '../../section/white/index'
 import Button from '../../button/index'
-import picture from '../../../images/icons/image-regular.svg'
+
 import './style.css'
 
-const Work = ({ data, className }) => (
-    <React.Fragment>
-        <div className={className}>
-            {data.map((value, index) => (
-                <Link key={index} to={value.node.id} className="works__item" style={{ backgroundImage: "url( " + (value.node.image.childImageSharp.fluid.src) + " )" }}>
-                    <div className="works__content">
-                        <span className="works__category">
-                            <img 
-                                className="works__picture" 
-                                src={picture} 
-                                alt="icon picture" />
-                        </span>
-                        <h3 className="works__title">{value.node.title}</h3>
-                    </div>
-                </Link>
-            ))}
-        </div>
-    </React.Fragment>
+const Projects = () => (
+    <StaticQuery 
+        query={graphql`
+            {
+                allContentfulWorks {
+                    edges {
+                      node {
+                        id
+                        header
+                        category
+                        image {
+                          id
+                          file {
+                            url
+                          }
+                        }
+                      }
+                    }
+                  }
+            }
+        `}
+        render={({
+            allContentfulWorks: {
+                edges
+            }
+        }) => (
+            <div className="works">
+                {edges.map(({ node }, index) => (
+                    (index === 7 ) ?  '' : 
+                    <Work content={node} key={node.id} />
+                ))}
+            </div>
+        )}
+    />
 )
 
-const Project = ({ data }) => (
-    <WhiteSection className="project">
+const Work = ({
+    content: {
+        id,
+        header,
+        category,
+        image: {
+            file: {
+                url
+            }
+        }
+    }
+}) => (
+    <Link to={"/"} className="works__item" style={{ backgroundImage: "url( " + (url) + " )" }}>
+        <div className="works__content">
+            <span className="works__category">
+                {category}
+            </span>
+            <h3 className="works__title">{header}</h3>
+        </div>
+    </Link>
+)
+
+const Project = () => (
+    <Section className="project">
         <Caption 
             title="Последние работы" 
-            description="2018 - 2019" />
-        <Work 
-            data={data} 
-            className="works" />
+            description="Картины на продажу" />
+        <Projects  />
         <Button 
             title="Смотреть" 
             url="/" 
             className="btn btn-black works__button" />
-    </WhiteSection>
+    </Section>
 )
 
 export default Project
