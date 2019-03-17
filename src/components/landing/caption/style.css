@@ -1,0 +1,15 @@
+.caption {
+    text-align: center;
+}
+
+.caption__h2 {
+    color: #101e4e;
+}
+
+.caption__p {
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin: .9rem 0;
+}
