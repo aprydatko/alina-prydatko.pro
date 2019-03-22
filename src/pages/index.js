@@ -1,5 +1,10 @@
 import React from "react"
 
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('UA-136796685-1');
+ReactGA.pageview('/');
+
 import Layout from "../components/layouts/index"
 import Author from "../components/landing/author/index"
 import Projects from "../components/landing/projects/index"
