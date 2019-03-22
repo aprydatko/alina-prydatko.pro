@@ -12,7 +12,7 @@ import "../typography"
 const Layout = ({ children, content }) => (
   <StaticQuery
     query={graphql`
-      query ContactTitleQuery {
+      query PageTitleQuery {
         site {
           siteMetadata {
             title
@@ -25,7 +25,12 @@ const Layout = ({ children, content }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title}>
             <TopMenu />
-            <Slider data={content} />
+            {console.log(content)}
+            <Slider 
+              title={content.title}
+              description={content.description}
+              backgroundImage={content.backgroundImage.image}
+              buttonUrl={content.buttonURL} />
         </Header>
         <main>{children}</main>
         <Footer />

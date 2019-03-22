@@ -25,7 +25,7 @@ const PhoneComponent = () => (
             }
         }) => (
             edges.map(({ node }, index) => (
-                index === 0 ? <Phone content={node} key={index} /> : ""
+                node.name === "Телефон" ? <Phone content={node} key={index} /> : ""
             ))
         )}
     />

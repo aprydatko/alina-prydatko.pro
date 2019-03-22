@@ -44,3 +44,7 @@
     border: 2px solid #cee002;
     color: black;
 }
+
+.btn-center {
+    margin: 0 auto;
+}

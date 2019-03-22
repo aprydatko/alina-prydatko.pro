@@ -22,6 +22,7 @@ const trim = (str, maxlength) => {
 
 const Work = ({ data }) => (
     <div className="work">
+    {console.log(data)}
          {data.map(content => (
             <WorkItem content={content.node} key={content.node.id} />
          ))}
@@ -30,9 +31,12 @@ const Work = ({ data }) => (
 
 const WorkItem = ({ 
     content: {
-        header,
+        title,
+        slug,
         content: {
-            content
+            childMarkdownRemark: {
+                excerpt
+            }
         },
         image: {
             file: {
@@ -42,16 +46,17 @@ const WorkItem = ({
         createdAt
     }
  }) => (
-    <Link to={`/`} className="work__item">
+    <Link to={`/${slug}`} className="work__item">
         <div className="work__item_img-wrap">
             <div    className="work__image" 
                     style={{ backgroundImage: `url(${url})` }}>
             </div>
         </div>
         <div className="work__item_content">
+            <div className="work__price">2000 грн</div>
             <div className="work__date">{DateFormat(createdAt, 10)}</div>
-            <h5 className="work__title">{trim(header, 30)}</h5>
-            <p className="work__content">{trim(content, 120)}</p>
+            <h5 className="work__title">{trim(title, 30)}</h5>
+            <p className="work__content">{trim(excerpt, 120)}</p>
             <div className="work__author">
                 Автор:   
                 <span className="work__author-link">Придатко Алина</span>

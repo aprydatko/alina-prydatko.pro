@@ -15,17 +15,17 @@ const Projects = () => (
                     edges {
                       node {
                         id
-                        header
+                        title
+                        slug
                         category
                         image {
-                          id
                           file {
                             url
                           }
                         }
                       }
                     }
-                  }
+                }
             }
         `}
         render={({
@@ -35,7 +35,7 @@ const Projects = () => (
         }) => (
             <div className="works">
                 {edges.map(({ node }, index) => (
-                    (index === 7 ) ?  '' : 
+                    (index >= 7 ) ?  '' : 
                     <Work content={node} key={node.id} />
                 ))}
             </div>
@@ -45,8 +45,8 @@ const Projects = () => (
 
 const Work = ({
     content: {
-        id,
-        header,
+        title,
+        slug,
         category,
         image: {
             file: {
@@ -55,12 +55,12 @@ const Work = ({
         }
     }
 }) => (
-    <Link to={"/"} className="works__item" style={{ backgroundImage: "url( " + (url) + " )" }}>
+    <Link to={`/${slug}`} className="works__item" style={{ backgroundImage: "url( " + (url) + " )" }}>
         <div className="works__content">
             <span className="works__category">
                 {category}
             </span>
-            <h3 className="works__title">{header}</h3>
+            <h3 className="works__title">{title}</h3>
         </div>
     </Link>
 )
@@ -73,7 +73,7 @@ const Project = () => (
         <Projects  />
         <Button 
             title="Смотреть" 
-            url="/" 
+            url="/works" 
             className="btn btn-black works__button" />
     </Section>
 )

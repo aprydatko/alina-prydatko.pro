@@ -8,14 +8,18 @@
     margin-top: 50px;
 }
 
+.advantages__item:hover .advantages__img {
+    fill: #c5a47e;
+}
+
 .advantages__item:first-child {
     margin-top: 0;
 }
 
 .advantages__img {
-    width: 90px;
-    height: 90px;
-    fill: #c5a47e;
+    width: 85px;
+    height: 85px;
+    fill: #ccc;
 }
 
 .advantages__title {

@@ -24,6 +24,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-svgr`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

@@ -7,28 +7,27 @@ const trim = (str, maxlength) => {
     str.slice(0, maxlength - 3) + '...' : str;
 }
 
-const Slider = ({ data }) => (
+const Slider = ({ title, description, backgroundImage, buttonUrl }) => (
     
     <div className="slider">
-        {data.map((slider, index) => (
-            <div key={index} className="slider__item" style={{ backgroundImage: `url(${slider.backgroundImage.image})` }}>
-                <div className="slider__content">
-                        <div className="container" style={{ position: "relative" }}>
-                            <h1 
-                                style={{ color: "white" }}>
-                                {trim(`${slider.title}`, 30)}
-                            </h1>
-                            <p>
-                                {trim(`${slider.description}`, 150)}
-                            </p>
-                            <Button 
-                                url={slider.buttonURL} 
-                                className="btn btn-white slider__btn" 
-                                title="Смотреть" />
-                        </div>
+       
+        <div className="slider__item" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className="slider__content">
+                    <div className="container" style={{ position: "relative" }}>
+                        <h1 
+                            style={{ color: "white" }}>
+                            {trim(`${title}`, 30)}
+                        </h1>
+                        <p>
+                            {trim(`${description}`, 150)}
+                        </p>
+                        <Button 
+                            url={buttonUrl} 
+                            className="btn btn-white slider__btn" 
+                            title="Смотреть" />
                     </div>
-            </div>
-        ))}
+                </div>
+        </div>
     </div>
 )
 

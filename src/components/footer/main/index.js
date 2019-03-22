@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import './style.css'
 import Logo from '../../logo/logo'
-import background from '../../../images/footer-background.jpg'
+import background from '../../../images/backgrounds/footer.jpg'
 
 const Header = ({ title }) => (
     <div  className="main-footer__title">
@@ -61,15 +61,16 @@ const Contacts = () => (
                 edges
             }
         }) => (
-            edges.map(({ node }, index) => (
+            edges.reverse().map(({ node }, index) => (
                <div key={index} className="main-footer__item main-footer__logo">
+               {console.log(node)}
                    <Header title={node.name} />
                     <Item 
-                        name={  index === 0 ? "Моб" : 
-                                index === 1 ? "Email" :
+                        name={  node.name === "Телефон" ? "Моб" : 
+                                node.name === "Почта" ? "Email" :
                                 "Адрес" }
-                        url={   index === 0 ? `tel:${node.content}` :
-                                index === 1 ? `malito:${node.content}` :
+                        url={   node.name === "Телефон" ? `tel:${node.content}` :
+                                node.name === "Почта" ? `malito:${node.content}` :
                                 `${node.content}`} 
                         content={node.content} />
                </div>

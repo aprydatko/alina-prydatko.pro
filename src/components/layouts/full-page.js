@@ -12,7 +12,7 @@ import "../typography"
 const Layout = ({ children, content }) => (
   <StaticQuery
     query={graphql`
-      query CategoryTitleQuery {
+      query FullPageQuery {
         site {
           siteMetadata {
             title
@@ -23,13 +23,13 @@ const Layout = ({ children, content }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title}>
+        <Header siteTitle={`data.site.siteMetadata.title`}>
             <TopMenu />
             <Slider 
               title={content.title}
-              description={content.description}
-              backgroundImage={content.backgroundImage.image}
-              buttonUrl={content.buttonURL} />
+              description={content.content.childMarkdownRemark.excerpt}
+              backgroundImage={content.image.file.url}
+              buttonUrl={`${content.slug}/#${content.slug}`} />
         </Header>
         <main>{children}</main>
         <Footer />

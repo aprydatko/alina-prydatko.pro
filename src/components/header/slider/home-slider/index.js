@@ -17,9 +17,12 @@ const Slider = () => (
                 edges {
                   node {
                     id
-                    header
+                    slug
+                    title
                     content {
-                      content
+                        childMarkdownRemark {
+                            excerpt
+                        }
                     }
                     image {
                       id
@@ -48,31 +51,29 @@ const Slider = () => (
 const Slide = ({
     content: {
         id,
-        header,
+        title,
+        slug,
         content: {
-            content
-        },
-        image: {
-            title,
-            file: {
-                url
+            childMarkdownRemark: {
+                excerpt
             }
-        }
+        },
+        image
     }
  }) => (
     <div key={id} className="slider">
-        <div className="slider__item" style={{ backgroundImage: `url(${url})` }}>
+        <div className="slider__item" style={{ backgroundImage: `url(${image.file.url})` }}>
             <div  className="slider__content">
                 <div className="container" style={{ position: "relative" }}>
                     <h1 
                         style={{ color: "white" }}>
-                        {trim(`${header}`, 30)}
+                        {trim(`${title}`, 30)}
                     </h1>
                     <p>
-                        {trim(`${content}`, 150)}
+                        {trim(`${excerpt}`, 150)}
                     </p>
                     <Button 
-                        url={`/${title}`}
+                        url={slug}
                         className="btn btn-white slider__btn" 
                         title="Смотреть" />
                 </div>
