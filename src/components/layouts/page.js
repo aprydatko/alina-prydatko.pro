@@ -25,7 +25,6 @@ const Layout = ({ children, content }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title}>
             <TopMenu />
-            {console.log(content)}
             <Slider 
               title={content.title}
               description={content.description}
