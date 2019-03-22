@@ -38,7 +38,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, .35);
+    background-color: rgba(0, 0, 0, .25);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -86,20 +86,11 @@
     margin-top: 60px;
 }
 
-.works__item:hover {
-    background-position: 10% 10%;
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
-}
-
 .works__item:hover .works__content {
     opacity: 1;
     z-index: 10;
     transition: opacity .35s ease-in-out;
-    transition-delay: .35s;
+ 
 }
 
 .works__item:hover::before {
@@ -109,6 +100,7 @@
 
 .works__content {
     max-width: 360px;
+    z-index: 10;
     opacity: 0;
 }
 

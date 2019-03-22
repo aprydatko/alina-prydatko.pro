@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import CaptionH2 from "../components/page/caption-h2/index"
 import Button from "../components/button/index"
-import image from "../images/backgrounds/404page.jpg"
+import image from "../images/slides/404page.jpg"
 
 const data = {
     title: "Страница не найдена!",

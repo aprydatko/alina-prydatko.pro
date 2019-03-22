@@ -28,7 +28,7 @@ const PriceTable = ({ name, size, price, timework, category, id }) => (
                 </tr>
                 <tr className="price-table__tr">
                     <td className="price-table__td">Размеры:</td>
-                    <td className="price-table__td">{size}</td>
+                    <td className="price-table__td">{size} м.</td>
                 </tr>
                 <tr className="price-table__tr">
                     <td className="price-table__td">Время работы:</td>

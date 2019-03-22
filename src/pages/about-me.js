@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
-import image from "../images/backgrounds/about-me.jpg"
+import image from "../images/slides/about-me.jpg"
 import SEO from "../components/seo"
 
 

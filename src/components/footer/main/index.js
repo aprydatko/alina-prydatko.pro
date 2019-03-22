@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 import './style.css'
 import Logo from '../../logo/logo'
-import background from '../../../images/backgrounds/footer.jpg'
+import background from '../../../images/footer.jpg'
 
 const Header = ({ title }) => (
     <div  className="main-footer__title">
@@ -61,7 +61,7 @@ const Contacts = () => (
                 edges
             }
         }) => (
-            edges.reverse().map(({ node }, index) => (
+            edges.map(({ node }, index) => (
                <div key={index} className="main-footer__item main-footer__logo">
                {console.log(node)}
                    <Header title={node.name} />

@@ -17,9 +17,9 @@ const Logo = () => (
       }
     `}
     render={data => 
-        <Link to="/">
+        <Link to="/" title="На главную">
           <Img 
-              className="logo" 
+              className="logo"
               fluid={data.placeholderImage.childImageSharp.fluid} />
         </Link>
         }

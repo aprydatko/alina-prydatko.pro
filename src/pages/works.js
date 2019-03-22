@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layouts/category"
 import SEO from "../components/seo"
 
-import image from "../images/backgrounds/works.jpg"
+import image from "../images/slides/works.jpg"
 import CaptionH2 from "../components/page/caption-h2"
 import WorkItem from "../components/work/index"
 
