@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import './style.css'
 
 const Button = ({ title, className, url, type, style }) => (
-    <Link to={url} className={className} type={type} style={style} >
+    <Link to={url} className={className} style={style} >
         {title}
     </Link>
 )

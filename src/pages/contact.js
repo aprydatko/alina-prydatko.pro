@@ -24,8 +24,8 @@ const ContactPage = () => (
           author="Придатко Алина"
           keywords={[`контакты`, `телефон`, `email`]} />
       <CaptionH2 
-          category="мои контакты"
-          title="Контакты"
+          category="контакты"
+          title="Мои контакты"
           description="Описание моих контактов" />
       <Map
           category="мои контакты"
