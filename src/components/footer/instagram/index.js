@@ -6,6 +6,8 @@ import insta2  from '../../../images/instagram/insta-2.jpg'
 import insta3  from '../../../images/instagram/insta-3.jpg'
 import insta4  from '../../../images/instagram/insta-4.jpg'
 
+
+
 const Instagram = () => (
     <div className="instagram">
          <div className="instagram__wrapper">

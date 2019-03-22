@@ -4,7 +4,7 @@ import './style.css'
 import Image from "./image/index"
 import WorkInfo from "./info/index"
 import PriceTable from "../../price-table/index"
-import Form from "../../form/index"
+import Buttom from "../../button/index"
 
 const LayoutWork = ({ data, children }) => (
     <div className="full-work">
@@ -14,21 +14,22 @@ const LayoutWork = ({ data, children }) => (
                 date={data.createdAt}
                 id={data.id} />
         </div>
-        <div className="container">
-            <Image 
+        <Image 
                 url={data.image.file.url} 
                 category={data.category} />
-        </div>
         <div className="full-work__content">
             <PriceTable 
                 name={data.title}
                 category={data.category}
                 id={data.id}
                 size={data.size}
+                timework={data.timework}
                 price={data.price} />
+            <h3 id={data.slug} className="full-work__title">Подробное описание картины {data.title}</h3>
             {children}
-            <Form 
-                title="Контактная форма"/>
+            <Buttom 
+                title="Купить"
+                style={{ margin: "60px auto", color: "black" }}/>
         </div>
     </div> 
 )

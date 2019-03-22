@@ -135,6 +135,11 @@
         max-width: 320px;
         margin-bottom: 30px;
     }
+    .work__price {
+        font-size: 1rem;
+        top: 25px;
+        right: 25px;
+    }
     .work__item_img-wrap {
         height: 225px;
     }

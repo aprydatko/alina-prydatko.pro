@@ -3,7 +3,6 @@
     margin: 0 auto;
     margin-top: 80px;
     width: 100%;
-    padding: 0 1rem;
 }
 
 .full-work__content {
@@ -69,3 +68,13 @@
     color: #0081ff;
     opacity: .75;
 }
+
+ /* Media Query */
+ @media screen and (max-width: 576px) {
+    .full-work__title {
+        text-align: center;
+    }
+    .page-info__item:last-child {
+        margin-left: 0;
+    }
+  }

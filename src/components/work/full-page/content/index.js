@@ -2,9 +2,7 @@ import React from 'react'
 import './style.css'
 
 const Content = ({ children }) => (
-    <div className="content">
-        {children}
-    </div>
+    {children}
 )
 
 export default Content

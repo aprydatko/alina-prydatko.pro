@@ -46,6 +46,7 @@ export const pageQuery = graphql`
             title
             slug
             category
+            timework
             price
             size
             image {

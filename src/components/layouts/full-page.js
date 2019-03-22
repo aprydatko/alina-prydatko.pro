@@ -31,7 +31,7 @@ const Layout = ({ children, content }) => (
               backgroundImage={content.image.file.url}
               buttonUrl={`${content.slug}/#${content.slug}`} />
         </Header>
-        <main>{children}</main>
+        <main className="container">{children}</main>
         <Footer />
       </>
     )}

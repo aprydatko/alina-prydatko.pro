@@ -32,7 +32,7 @@ const Layout = ({ children, content }) => (
               backgroundImage={content.backgroundImage.image}
               buttonUrl={content.buttonURL} />
         </Header>
-        <main>{children}</main>
+        <main className="container">{children}</main>
         <Footer />
       </>
     )}

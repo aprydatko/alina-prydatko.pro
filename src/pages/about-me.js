@@ -8,7 +8,6 @@ import SEO from "../components/seo"
 
 import Layout from "../components/layouts/page"
 import FullPage from "../components/work/full-page/about-me/index"
-import Button from "../components/button/index"
 import Form from "../components/form/index"
 
 const content = {
@@ -33,7 +32,6 @@ class AboutMePage extends Component {
                 keywords={[`обо мне`, `портфолио`, `биография`]} />
             <FullPage data={this.props.data.contentfulAuthor}>
                 <div dangerouslySetInnerHTML={{__html: text.childMarkdownRemark.html}} />
-
                 <Form 
                     title="Форма для связи" />
             </FullPage>
