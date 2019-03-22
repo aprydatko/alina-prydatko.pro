@@ -7,14 +7,12 @@ import CaptionH2 from "../components/page/caption-h2/index"
 import Button from "../components/button/index"
 import image from "../images/backgrounds/404page.jpg"
 
-const data = [
-    {
-        title: "Страница не найдена!",
-        description: "Ошибка 404 - Страница не найдена",
-        backgroundImage: {image},
-        buttonURL: "/"
-    }
-]
+const data = {
+    title: "Страница не найдена!",
+    description: "Ошибка 404 - Страница не найдена",
+    backgroundImage: {image},
+    buttonURL: "/"
+}
 
 const NotFoundPage = () => (
   <Layout content={data}>
