@@ -1,19 +1,19 @@
 .instagram {
-    margin: 0 auto;
-    margin-top: 130px;
-    max-width: 1400px;
-    background-color: black;
+    position: relative;
+    margin-top: 75px;
+    background-color: #2b2b2b;
 }
 
 .instagram__wrapper {
-    position: relative;
+    margin: 0 auto;
+    max-width: 1400px;
     height: 360px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
 }
 
-.instagram__wrapper::before {
+.instagram::before {
     content: "";
     position: absolute;
     top: 0;

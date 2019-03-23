@@ -27,6 +27,9 @@ const Slider = () => (
                     image {
                       id
                       title
+                      fixed (width: 1920, height: 1080) {
+                        src
+                      }
                       file {
                         url
                       }
@@ -62,7 +65,7 @@ const Slide = ({
     }
  }) => (
     <div key={id} className="slider">
-        <div className="slider__item" style={{ backgroundImage: `url(${image.file.url})` }}>
+        <div className="slider__item" style={{ backgroundImage: `url(${image.fixed.src})` }}>
             <div  className="slider__content">
                 <div className="container" style={{ position: "relative" }}>
                     <h1 

@@ -40,6 +40,9 @@ const WorkItem = ({
             }
         },
         image: {
+            fixed: {
+                src
+            },
             file: {
                 url
             }
@@ -50,7 +53,7 @@ const WorkItem = ({
     <Link to={`/${slug}`} className="work__item">
         <div className="work__item_img-wrap">
             <div    className="work__image" 
-                    style={{ backgroundImage: `url(${url})` }}>
+                    style={{ backgroundImage: `url(${src})` }}>
             </div>
         </div>
         <div className="work__item_content">

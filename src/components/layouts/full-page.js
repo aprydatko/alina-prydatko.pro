@@ -28,7 +28,7 @@ const Layout = ({ children, content }) => (
             <Slider 
               title={content.title}
               description={content.content.childMarkdownRemark.excerpt}
-              backgroundImage={content.image.file.url}
+              backgroundImage={content.image.fixed.src}
               buttonUrl={`${content.slug}/#${content.slug}`} />
         </Header>
         <main className="container">{children}</main>

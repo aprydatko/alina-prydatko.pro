@@ -19,6 +19,9 @@ const Projects = () => (
                         slug
                         category
                         image {
+                            fixed (width: 800) {
+                                src
+                            }
                           file {
                             url
                           }
@@ -49,13 +52,13 @@ const Work = ({
         slug,
         category,
         image: {
-            file: {
-                url
+            fixed: {
+                src
             }
         }
     }
 }) => (
-    <Link to={`/${slug}`} className="works__item" style={{ backgroundImage: "url( " + (url) + " )" }}>
+    <Link to={`/${slug}`} className="works__item" style={{ backgroundImage: "url( " + (src) + " )" }}>
         <div className="works__content">
             <span className="works__category">
                 {category}

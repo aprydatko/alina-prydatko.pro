@@ -55,6 +55,9 @@ export const pageQuery = graphql`
               id
               title
               description
+              fixed (width: 570) {
+                  src
+              }
               file {
                 url
               }
