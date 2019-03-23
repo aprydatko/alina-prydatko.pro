@@ -36,12 +36,17 @@
 
     .instagram__item {
         width: 25%;
-        height: 240px;
+    }
+    .instagram__wrapper {
+        height: 260px;
     }
 }
 
 @media screen and (max-width: 768px) {
 
+    .instagram__wrapper {
+        height: 340px;
+    }
     .instagram {
         margin-top: 60px;
     }
@@ -53,11 +58,14 @@
 
 @media screen and (max-width: 576px) {
 
+    .instagram__wrapper {
+        height: 320px;
+    }
+
     .instagram {
         margin-top: 40px;
     }
-    
     .instagram__item {
-        height: 160px;
+        width: 100%;
     }
 }
