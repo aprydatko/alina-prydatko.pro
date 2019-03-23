@@ -1,21 +1,97 @@
 import React from 'react'
+import { StaticQuery, graphql } from "gatsby"
+import InstagramEmbed from 'react-instagram-embed';
 import './style.css'
 
-import insta1  from '../../../images/instagram/insta-1.jpg'
-import insta2  from '../../../images/instagram/insta-2.jpg'
-import insta3  from '../../../images/instagram/insta-3.jpg'
-import insta4  from '../../../images/instagram/insta-4.jpg'
+const InstagramURL = () => (
+      <StaticQuery 
+          query={graphql`
+              {
+                  allContentfulInstagram {
+                        edges {
+                          node {
+                            url1
+                            url2
+                            url3
+                            url4
+                          }
+                        }
+                  }
+              }
+          `}
+          render={({
+            allContentfulInstagram: {
+                  edges: [
+                        {
+                              node
+                        }
+                  ]
+              }
+          }) => (
+                  <div className="instagram__wrapper">
+                        <div className="instagram__item">
+                              <InstagramEmbed
+                                    url={node.url1}
+                                    hideCaption={true}
+                                    containerTagName='div'
+                                    protocol=''
+                                    injectScript
+                                    onLoading={() => {}}
+                                    onSuccess={() => {}}
+                                    onAfterRender={() => {}}
+                                    onFailure={() => {}}
+                              />
+                        </div>
+                        <div className="instagram__item">
+                              <InstagramEmbed
+                                    url={node.url2}
+                                    hideCaption={true}
+                                    containerTagName='div'
+                                    protocol=''
+                                    injectScript
+                                    onLoading={() => {}}
+                                    onSuccess={() => {}}
+                                    onAfterRender={() => {}}
+                                    onFailure={() => {}}
+                              />
+                        </div>
+                        <div className="instagram__item">
+                              <InstagramEmbed
+                                    url={node.url3}
+                                    hideCaption={true}
+                                    containerTagName='div'
+                                    protocol=''
+                                    injectScript
+                                    onLoading={() => {}}
+                                    onSuccess={() => {}}
+                                    onAfterRender={() => {}}
+                                    onFailure={() => {}}
+                              />
+                        </div>
+                        <div className="instagram__item">
+                              <InstagramEmbed
+                                    url={node.url4}
+                                    hideCaption={true}
+                                    containerTagName='div'
+                                    protocol=''
+                                    injectScript
+                                    onLoading={() => {}}
+                                    onSuccess={() => {}}
+                                    onAfterRender={() => {}}
+                                    onFailure={() => {}}
+                              />
+                        </div>
+                  </div>
+                  
+          )}
+      />
+  )
+  
 
 
-
-const Instagram = () => (
+const Instagram = ({ data }) => (
     <div className="instagram">
-         <div className="instagram__wrapper">
-               <div className="instagram__item"  style={{ backgroundImage: "url( " + (insta1) + " )" }}></div>
-               <div className="instagram__item"  style={{ backgroundImage: "url( " + (insta2) + " )" }}></div>
-               <div className="instagram__item"  style={{ backgroundImage: "url( " + (insta3) + " )" }}></div>
-               <div className="instagram__item"  style={{ backgroundImage: "url( " + (insta4) + " )" }}></div>
-         </div>
+          <InstagramURL />
       </div>
 )
 
