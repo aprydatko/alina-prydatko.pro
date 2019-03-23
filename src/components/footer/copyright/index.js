@@ -7,7 +7,7 @@ const Copyright = () => (
     <div className="copyright">
         <p className="copyright__text">
             © {new Date().getFullYear() + ' '} 
-            Сделано <a href={config.siteCopyright.site} style={{ color: "white" }}>{config.siteCopyright.site}</a>
+            Сделано <a target="_blank" href={`http://${config.siteCopyright.site}`} style={{ color: "white" }}>{config.siteCopyright.site}</a>
         </p>
     </div>
 )
