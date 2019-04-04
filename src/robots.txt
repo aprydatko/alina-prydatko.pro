@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-User-agent: Yandex
-Host: alina-prydatko.pro
-
-User-agent: Google
-Host: alina-prydatko.pro
