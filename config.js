@@ -10,6 +10,10 @@ module.exports = {
                 url: `/works`
             },
             {
+                name: `Портфолио`,
+                url: `/portfolio`
+            },
+            {
                 name: `Обо мне`,
                 url: `/about-me`
             },

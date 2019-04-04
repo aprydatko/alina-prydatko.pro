@@ -2,7 +2,9 @@ User-agent: *
 Allow: /
 
 User-agent: Yandex
+Disallow: /portfolio/
 Host: alina-prydatko.pro
 
 User-agent: Google
+Disallow: /portfolio/
 Host: alina-prydatko.pro
