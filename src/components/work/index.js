@@ -57,7 +57,7 @@ const WorkItem = ({
             </div>
         </div>
         <div className="work__item_content">
-            <div className="work__price">{price} грн.</div>
+            <div className="work__price">{price ? price + 'грн' : ''}</div>
             <div className="work__date">{DateFormat(createdAt, 10)}</div>
             <h5 className="work__title">{trim(title, 30)}</h5>
             <p className="work__content">{trim(excerpt, 120)}</p>

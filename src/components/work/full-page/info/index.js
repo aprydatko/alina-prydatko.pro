@@ -68,7 +68,7 @@ const PostInfo = ({date, id}) => (
         <li className="page-info__item">
             <div className="page-info__id">
                <span>id №:</span>
-               <span className="page-info__text">0{trim(id, 5)}</span>
+               <span className="page-info__text">0{id ? trim(id, 5) : ''}</span>
             </div>
         </li>
     </>
